@@ -1,0 +1,4 @@
+
+* Copied from http://winunit.codeplex.com/
+
+* Added support for easy usage in CMake projects
