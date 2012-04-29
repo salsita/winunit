@@ -11,9 +11,9 @@ endif(CMAKE_CL_64)
 
 macro(add_unittest_library libname)
 
-	file(GLOB test_files *.cpp)
+	file(GLOB test_files *.cpp *.h)
 
-	add_library(${libname}-test SHARED "${test_files}")
+	add_library(${libname}-test SHARED ${test_files})
 
 	add_definitions("-D_CRT_SECURE_NO_WARNINGS -D_UNICODE")
 
