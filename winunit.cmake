@@ -9,7 +9,7 @@ else(CMAKE_CL_64)
 	file(TO_NATIVE_PATH "${CMAKE_CURRENT_LIST_DIR}/WinUnit32.exe" winunit_exe)
 endif(CMAKE_CL_64)
 
-macro(add_unittest_library libname)
+macro(add_winunit_test libname)
 
 	file(GLOB test_files *.cpp *.h)
 
@@ -34,4 +34,4 @@ macro(add_unittest_library libname)
 		COMMAND ${winunit_exe} \"$(TargetPath)\"
 	)
 
-endmacro(add_unittest_library libname)
+endmacro(add_winunit_test libname)
